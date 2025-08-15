@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing — UNTAR Style</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR SEDERHANA -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img
+            src="/assets/logo-yayasan-tarumanagara.png"
+            alt="Logo"
+            width="158"
+            height="58"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMain"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navMain" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Berita & Kegiatan</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Lowongan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+            <li class="nav-item">
+              <span
+                class="badge text-bg-light d-inline-flex align-items-center gap-"
+              >
+                <img src="/assets/UNTAR.svg" width="16" height="12" alt="INA" />
+                INA
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-4">
+      <div class="container">
+        <div
+          id="heroCarousel"
+          class="carousel slide rounded-4 shadow-lg overflow-hidden"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active">
+              <div class="hero">
+                <div class="hero-layers" aria-hidden="true">
+                  <img
+                    src="/assets/96849360d4bc7b3f05446edbfd2c18f1495ffe8e.jpg"
+                    alt=""
+                    class="layer layer-0"
+                  />
+                  <img
+                    src="/assets/UNTAR.svg"
+                    alt=""
+                    class="layer layer-1 contain"
+                  />
+                  <img
+                    src="/assets/96849360d4bc7b3f05446edbfd2c18f1495ffe8e.jpg"
+                    alt=""
+                    class="layer layer-2"
+                  />
+                </div>
+
+                <h1 class="hero-watermark">UNTAR</h1>
+                <div class="hero-gradient"></div>
+                <div class="hero-year">2008</div>
+                <div class="hero-caption card card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt...
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item">
+              <div class="hero">
+                <div class="hero-layers" aria-hidden="true">
+                  <img
+                    src="/assets/96849360d4bc7b3f05446edbfd2c18f1495ffe8e.jpg"
+                    alt=""
+                    class="layer layer-0"
+                  />
+                  <img
+                    src="/assets/UNTAR.svg"
+                    alt=""
+                    class="layer layer-1 contain"
+                  />
+                  <img
+                    src="/assets/3fcb3ac4-f5ce-41ff-bcf2-24eea0b2bd71 2.png"
+                    alt=""
+                    class="layer layer-2"
+                  />
+                </div>
+
+                <h1 class="hero-watermark">UNTAR</h1>
+                <div class="hero-gradient"></div>
+                <div class="hero-year">2015</div>
+                <div class="hero-caption card card-body">
+                  Program dan inisiatif baru yang mendorong inovasi, kolaborasi
+                  industri, serta pengabdian masyarakat.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button
+            class="carousel-control-prev hero-control"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+            aria-label="Sebelumnya"
+          >
+            <span class="hero-arrow" aria-hidden="true">‹</span>
+          </button>
+          <button
+            class="carousel-control-next hero-control"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+            aria-label="Berikutnya"
+          >
+            <span class="hero-arrow" aria-hidden="true">›</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <footer class="site-footer py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- KIRI: logo, deskripsi, sosmed -->
+          <div class="col-12 col-lg-6">
+      <img src="assets/logo-yayasan-tarumanagara.png" style="border:1px solid red" alt="">
+
+
+            <p class="mb-4 footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <ul
+              class="list-unstyled d-flex align-items-center gap-3 mb-4 footer-social"
+            >
+              <li>
+                <a aria-label="X" href="#"><i class="bi bi-twitter-x"></i></a>
+              </li>
+              <li>
+                <a aria-label="Instagram" href="#"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a aria-label="YouTube" href="#"
+                  ><i class="bi bi-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a aria-label="WhatsApp" href="#"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+              </li>
+            </ul>
+
+            <hr class="footer-sep d-none d-lg-block" />
+            <div class="small text-white-50 mt-3 d-none d-lg-block">
+              <span
+                >&copy; <span id="year"></span> Tarumanagara Foundation, All
+                rights reserved.</span
+              >
+            </div>
+          </div>
+
+          <!-- KANAN: alamat, telp, jam -->
+          <div class="col-12 col-lg-6">
+            <ul class="list-unstyled footer-contact">
+              <li class="d-flex gap-3 align-items-start mb-3">
+                <i class="bi bi-geo-alt-fill fs-4 flex-shrink-0"></i>
+                <div>
+                  <strong
+                    >Kampus I Universitas Tarumanagara Gedung Utama Lantai
+                    2</strong
+                  ><br />
+                  Jl. Letjen S. Parman No.1, RT.6/RW.16, Tomang, Kec. Grogol
+                  Petamburan, Kota Jakarta Barat, DKI Jakarta 11470
+                </div>
+              </li>
+              <li class="d-flex gap-3 align-items-start mb-3">
+                <i class="bi bi-telephone-fill fs-4 flex-shrink-0"></i>
+                <div>(021) 5695-8728</div>
+              </li>
+              <li class="d-flex gap-3 align-items-start">
+                <i class="bi bi-clock-fill fs-4 flex-shrink-0"></i>
+                <div>
+                  <strong>Jam Operasional:</strong><br />
+                  Senin – Jumat (08.00–16.45)
+                </div>
+              </li>
+            </ul>
+
+            <!-- copyright muncul di mobile/tablet -->
+            <hr class="footer-sep d-lg-none" />
+            <div class="small text-white-50 mt-3 d-lg-none">
+              <span
+                >&copy; <span class="year-copy"></span> Tarumanagara Foundation,
+                All rights reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- App JS -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

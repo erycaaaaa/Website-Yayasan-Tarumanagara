@@ -1,0 +1,138 @@
+/* --- HERO BASE (ukuran tetap seperti versi 1 gambar) --- */
+.hero {
+  position: relative;
+  aspect-ratio: 16 / 7;      /* proporsi sama */
+  background: #0b1320;
+  overflow: hidden;
+}
+
+/* 3 layer penuh kanvas */
+.hero-layers { position: absolute; inset: 0; }
+.hero-layers .layer {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  pointer-events: none;
+  transform: translate3d(0,0,0);
+}
+.hero-layers .contain { object-fit: contain; }
+
+/* urutan tumpukan */
+.layer-0 { z-index: 0; }
+.layer-1 { z-index: 1; }
+.layer-2 { z-index: 2; }
+
+/* overlay (lebih tinggi dari layer) */
+.hero-watermark { z-index: 3;
+  position: absolute; inset: 0; margin: 0; display: grid; place-items: center;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+  font-weight: 800; letter-spacing: .05em;
+  font-size: clamp(3rem, 16vw, 22rem);
+  color: rgba(255,255,255,.85); mix-blend-mode: screen; opacity: .75;
+  text-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.hero-gradient { z-index: 4;
+  position: absolute; inset: auto 0 0 0; height: 42%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 50%, rgba(0,0,0,.75) 100%);
+}
+.hero-year { z-index: 5; position: absolute; left: 24px; bottom: 28px;
+  color:#fff; font-weight:700; font-size: clamp(0.9rem,1.2vw,1.1rem); text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+
+
+/* tombol prev/next custom */
+.hero-control { width:auto; top:auto; bottom:24px; transform:none; opacity:1; z-index:6; }
+.carousel-control-prev.hero-control { right: 76px; left: auto; }
+.carousel-control-next.hero-control { right: 24px; }
+.hero-arrow {
+  display:inline-grid; place-items:center; width:46px; height:46px;
+  background:#fff; color:#1f2937; border-radius:10px; font-size:28px; font-weight:700; line-height:1;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+
+/* responsif kecil */
+@media (max-width: 575.98px) {
+  .hero { aspect-ratio: 16 / 10; }
+  .hero-caption { width: calc(100% - 24px); left: 12px; right: 12px; }
+}
+/* Hero caption: tanpa background, hanya text-shadow */
+.hero-caption {
+  position: absolute;
+  
+  right: clamp(12px, 2vw, 28px);
+  bottom: clamp(18px, 2vw, 32px);
+  width: min(820px, 80%);
+
+  /* warna & bayangan teks */
+  color: #fff;
+  text-shadow:
+    0 2px 6px rgba(0,0,0,.45),
+    0 6px 22px rgba(0,0,0,.35);
+
+  /* hilangkan gaya "card" */
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+
+  /* typografi */
+  font-size: clamp(.9rem, 1.2vw, 1rem);
+  line-height: 1.5;
+  z-index: 5;
+  padding: .75rem 0; /* atau 0 kalau mau benar-benar tanpa ruang */
+}
+:root{
+  --footer-bg: #2f4a76;               /* biru seperti contoh */
+  --footer-line: rgba(255,255,255,.35);
+  --footer-text: #ffffff;
+  --footer-text-muted: rgba(255,255,255,.75);
+}
+
+.site-footer{
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.site-footer a{ color: var(--footer-text); text-decoration: none; }
+.site-footer a:hover{ color:#e9eefc; }
+
+.footer-text{ color: var(--footer-text); font-size: clamp(.95rem,1.8vw,1.05rem); }
+
+/* Sosial media: kotak ikon */
+.footer-social a{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid var(--footer-line);
+  border-radius: 8px;
+  font-size: 1.15rem;
+  transition: all .2s ease;
+}
+.footer-social a:hover{
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Item kontak (ikon + teks) */
+.footer-contact i{
+  color: var(--footer-text);
+  opacity: .9;
+  line-height: 1;
+  margin-top: .15rem; /* sejajarkan icon dengan teks */
+}
+.footer-contact div{
+  color: var(--footer-text-muted);
+}
+
+/* Garis tipis */
+.footer-sep{
+  border: 0;
+  height: 1px;
+  background: var(--footer-line);
+  margin: 1.25rem 0 0;
+}
+
+/* Responsif */
+@media (max-width: 991.98px){
+  .site-footer{ text-align: left; } /* biarkan left, atau ganti center jika mau */
+}
