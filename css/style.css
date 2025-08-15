@@ -17,10 +17,26 @@
 }
 .hero-layers .contain { object-fit: contain; }
 
-/* urutan tumpukan */
+/* Jangan beri z-index di .hero-layers (biarkan auto), agar anaknya bisa menimpa elemen lain */
+.hero-layers { position:absolute; inset:0; /* z-index:auto */ }
+
+/* Urutan layer gambar */
 .layer-0 { z-index: 0; }
-.layer-1 { z-index: 1; }
+.layer-1 {
+  position: relative; 
+  top: -100px;          /* naik 100px lewat offset top */
+  transform: scale(0.9);
+}
+
 .layer-2 { z-index: 2; }
+.layer-3 { z-index: 4; transform: translateY(-60px) !important; -webkit-transform: translateY(-60px) !important; -moz-transform: translateY(-60px) !important; -ms-transform: translateY(-60px) !important; -o-transform: translateY(-60px) !important; }   /* > watermark (3), < gradient (5) */
+
+/* Overlay lain */
+.hero-watermark { z-index: 3; }   /* tulisan UNTAR di bawah layer-3 */
+.hero-gradient  { z-index: 5; }   /* gradasi tetap di atas semua layer */
+.hero-year,
+.hero-caption   { z-index: 6; }   /* teks caption & tahun tetap paling atas */
+.hero-control   { z-index: 7; }   /* tombol prev/next */
 
 /* overlay (lebih tinggi dari layer) */
 .hero-watermark { z-index: 3;
