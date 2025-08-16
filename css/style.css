@@ -21,15 +21,8 @@
 .hero-layers { position:absolute; inset:0; /* z-index:auto */ }
 
 /* Urutan layer gambar */
-.layer-0 { z-index: 0; }
-.layer-1 {
-  position: relative; 
-  top: -100px;          /* naik 100px lewat offset top */
-  transform: scale(0.9);
-}
-
-.layer-2 { z-index: 2; }
-.layer-3 { z-index: 4; transform: translateY(-60px) !important; -webkit-transform: translateY(-60px) !important; -moz-transform: translateY(-60px) !important; -ms-transform: translateY(-60px) !important; -o-transform: translateY(-60px) !important; }   /* > watermark (3), < gradient (5) */
+.layer-0 { z-index: 0; transform: translateY(-0px) !important; -webkit-transform: translateY(0px) !important; -moz-transform: translateY(0px) !important; -ms-transform: translateY(0px) !important; -o-transform: translateY(0px) !important; }
+.layer-3 { z-index: 4; transform: translateY(-40px) !important; -webkit-transform: translateY(-40px) !important; -moz-transform: translateY(-40px) !important; -ms-transform: translateY(-40px) !important; -o-transform: translateY(-40px) !important; }   /* > watermark (3), < gradient (5) */
 
 /* Overlay lain */
 .hero-watermark { z-index: 3; }   /* tulisan UNTAR di bawah layer-3 */
@@ -151,4 +144,19 @@
 /* Responsif */
 @media (max-width: 991.98px){
   .site-footer{ text-align: left; } /* biarkan left, atau ganti center jika mau */
+}
+/* Default: untuk mobile (center, kecil) */
+.footer-logo {
+  max-width: 120px;
+  margin: 0 auto 1rem; /* center di mobile */
+  padding: 6px;
+}
+
+/* Desktop: lebih besar dan rata kiri */
+@media (min-width: 992px) {
+  .footer-logo {
+    max-width: 160px;
+    margin: 0 0 1rem 0; /* kiri, ada jarak bawah */
+    padding: 10px;
+  }
 }
